@@ -1,13 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-const initialState = {
-    information: {}
-}
-
-const infoSlice = createSlice({
-    name:'infoSlice',
-    initialState,
-    reducers: {
-        
+import { configureStore } from "@reduxjs/toolkit";
+import { infoReducer } from "./wordSlice";
+export const store = configureStore({
+    reducer: {
+        getWord: infoReducer
     }
 })
