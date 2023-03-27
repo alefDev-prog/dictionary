@@ -1,24 +1,15 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
-    information: "test",
+    information: null,
     isLoading:false
 }
 
-export const getWordInfo = createAsyncThunk('info/getWordInfo', async () => {
-    try {
-        const response = await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/hello', {
-        method:"GET",
-        headers: {
-            'content-type': 'application/json'
-        }
-    });
-    const data = await response.json();
-    console.log(data);
-    return data;
-    } catch(e) {
-        console.log(e);
-    }
+export const getWordInfo = createAsyncThunk('info/getWordInfo', async (word, thunkAPI) => {
+    
+    const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+    return response.data;
     
 })
 
@@ -26,21 +17,26 @@ const infoSlice = createSlice({
     name:'info',
     initialState,
     reducers: {
+        setInformation: (state) => {
+            state.information= null;
+        }
     },
     extraReducers(builder) {
         builder
         .addCase(getWordInfo.pending, (state, action) => {
             state.isLoading=true;
         })
+        .addCase(getWordInfo.rejected, (state, action) => {
+            state.isLoading=false;
+        })
         .addCase(getWordInfo.fulfilled, (state, action) => {
             state.isLoading=false;
             state.information=action.payload;
         })
-        .addCase(getWordInfo.rejected, (state, action) => {
-            state.isLoading=false;
-            console.log(action.payload);
-        })
+        
     }
 });
+
+export const {setInformation} = infoSlice.actions;
 
 export const infoReducer = infoSlice.reducer;
