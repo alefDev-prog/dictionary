@@ -11,7 +11,7 @@ function StaticInfo() {
             return second;
         }
     }
-    if(information != null) {
+    if(information !== null) {
         var word = information[0].word;
 
         //fonetics
@@ -38,17 +38,7 @@ function StaticInfo() {
                     {partArr}</article>
                 
                 }
-            
-            
             </section>
-            <section id="origin-section" className="static-section">
-            {
-                information === null ?
-                <div></div>:
-                <div>{information[0].origin}</div>
-                }
-            </section>  
-        
         </div>
     )
 }

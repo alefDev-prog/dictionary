@@ -1,5 +1,6 @@
 import './css/style.css';
 import StaticInfo from './staticInfo.js';
+import Definiton from './definition';
 import {useEffect, useState} from 'react';
 import { useSelector, useDispatch} from 'react-redux';
 import { getWordInfo, setInformation } from './redux/wordSlice';
@@ -20,6 +21,9 @@ function App() {
   const search = (e) => {
     e.preventDefault();
     dispatch(getWordInfo(input));
+    setTimeout(()=> {
+
+    }, 2000);
   }
 
 
@@ -31,6 +35,7 @@ function App() {
       </form>
       
       <StaticInfo />
+      <Definiton />
       
 
     </div>
