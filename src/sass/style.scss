@@ -1,3 +1,20 @@
-body {
+@import '_reset.scss';
+@import '_mixins.scss';
+
+#search-form  {
+    width: 100%;
+    max-width: 500px;
+    @include flex(row, nowrap);
+
+    #input {
+        padding:1rem;
+        width: 100%;
+       
+    }
+
+    #submit {
+        padding: 1rem;
     
+    }
+
 }
