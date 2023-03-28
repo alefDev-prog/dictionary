@@ -13,7 +13,7 @@ function Definiton (){
 
             return(
                 <div id="definition-section"className="section">
-                    <h2>{partOfSpeech}</h2>
+                    <h2 id="definition-title">{partOfSpeech}</h2>
                     <article>
                         <h3>{definitions}</h3>
                     </article>

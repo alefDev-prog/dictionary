@@ -36,7 +36,7 @@ function StaticInfo() {
                 <article>
                     <h2 id="word">{word}</h2>
                     <h3 id="phonetics">Pronounciation: {phonetic}</h3>
-                    <h3>{partArr}</h3>
+                    <h3>Part of speech: {partArr}</h3>
                 </article>
                 
                 }
