@@ -1,8 +1,9 @@
 import './css/style.css';
-import Display from './display.js';
+import StaticInfo from './staticInfo.js';
 import {useEffect, useState} from 'react';
 import { useSelector, useDispatch} from 'react-redux';
-import { getWordInfo } from './redux/wordSlice';
+import { getWordInfo, setInformation } from './redux/wordSlice';
+
 //api for dictionary: https://dictionaryapi.dev/
 function App() {
   const dispatch = useDispatch();
@@ -16,17 +17,20 @@ function App() {
     setInput(e.target.value);
   }
 
-  const search = () => {
+  const search = (e) => {
+    e.preventDefault();
     dispatch(getWordInfo(input));
   }
 
 
   return (
     <div className="App">
-      <input type="text" autoFocus  onChange={handleChange}/>
-      <button type="submit" id="submit" name="submit" onClick={search}>Search</button>
-      <Display />
-      {information === null ? <p></p> : <p>{information[0].word}</p>}
+      <form onSubmit={search}>
+        <input type="text" onChange={handleChange} autoFocus placeholder='Enter word'/>
+        <button type="submit" id="submit" name="submit">Search</button>
+      </form>
+      
+      <StaticInfo />
       
 
     </div>

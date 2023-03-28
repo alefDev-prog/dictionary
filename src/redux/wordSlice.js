@@ -9,6 +9,7 @@ const initialState = {
 export const getWordInfo = createAsyncThunk('info/getWordInfo', async (word, thunkAPI) => {
     
     const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+    console.log(response.data)
     return response.data;
     
 })
