@@ -20,8 +20,8 @@ function StaticInfo() {
         var phonetic = determinePhonetics(phonetic1, phonetic2);
 
         //partOfSpeech
-        var partArr = information[0].meanings.map(element => {
-            return <span>{element.partOfSpeech}</span>;
+        var partArr = information[0].meanings.map((element, index) => {
+            return <span key={element.id}>{element.partOfSpeech}</span>;
         });
         
         

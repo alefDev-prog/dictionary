@@ -1,4 +1,6 @@
 import { useSelector } from "react-redux";
+
+
 function Definiton (){
     const {information} = useSelector(store => store.getWord);
 
@@ -7,8 +9,8 @@ function Definiton (){
 
         var dynamicInfo = meanings.map(el => {
             const partOfSpeech = el.partOfSpeech;
-            const definitions = el.definitions.map(def => {
-                return def.definition
+            const definitions = el.definitions.map((def, index) => {
+                return <p className="definition" key={def.id}>{def.definition}</p>
             })
 
             return(
