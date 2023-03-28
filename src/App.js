@@ -34,11 +34,14 @@ function App() {
       <form id="search-form"onSubmit={search}>
         <input id="input" type="text" onChange={handleChange} autoFocus placeholder='Enter word'/>
         <button type="submit" id="submit" name="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-        
       </form>
+
+      <main>
+        <StaticInfo />
+        <Definiton />
+      </main>
       
-      <StaticInfo />
-      <Definiton />
+      
       
 
     </div>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Quicksand&family=Roboto+Mono&display=swap");
 *, ::before, ::after {
   padding: 0;
   margin: 0;
@@ -6,6 +7,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Inter", sans-serif;
 }
 
 .App {
@@ -27,4 +29,39 @@ html {
 }
 #search-form #submit {
   padding: 1rem;
+}
+
+main {
+  margin-top: 4rem;
+}
+
+.section {
+  background-color: white;
+  margin: 1rem 1rem;
+  padding: 1rem;
+}
+
+#static-section article * {
+  margin-bottom: 0.7rem;
+}
+#static-section article *:last-child {
+  margin-bottom: 0;
+}
+#static-section #word {
+  color: rgb(0, 106, 255);
+  font-size: 3rem;
+  font-weight: Bold 700;
+  margin-bottom: 2rem;
+}
+#static-section h3 {
+  font-size: 1.8rem;
+}
+#static-section span {
+  font-size: 1.8rem;
+}
+#static-section span::after {
+  content: "/";
+}
+#static-section span:last-of-type::after {
+  content: "";
 }/*# sourceMappingURL=style.css.map */

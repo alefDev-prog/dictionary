@@ -5,16 +5,58 @@
     width: 100%;
     max-width: 500px;
     @include flex(row, nowrap);
-
     #input {
         padding:1rem;
         width: 100%;
        
     }
-
     #submit {
         padding: 1rem;
     
     }
-
 }
+
+main {
+    margin-top: 4rem;
+}
+
+.section {
+    background-color: $white-color;
+    margin:1rem 1rem;
+    padding:1rem;
+}
+
+#static-section {
+
+    article * {
+        margin-bottom: 0.7rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    #word {
+        color:$blue-color;
+        font-size: 3rem;
+        font-weight:Bold 700;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+    span {
+        font-size: 1.8rem;
+        &::after{
+            content: "/";
+        }
+
+        &:last-of-type::after {
+            content: "";
+        }
+    }
+}
+
+
+

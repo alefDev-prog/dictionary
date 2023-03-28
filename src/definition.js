@@ -12,10 +12,10 @@ function Definiton (){
             })
 
             return(
-                <div className="container">
+                <div id="definition-section"className="section">
                     <h2>{partOfSpeech}</h2>
                     <article>
-                        <p>{definitions}</p>
+                        <h3>{definitions}</h3>
                     </article>
                 </div>
                 
