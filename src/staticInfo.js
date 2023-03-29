@@ -26,7 +26,8 @@ function StaticInfo() {
         
         
     }
-    return(
+    
+    if(information !== null) return(
 
         <div className="StaticInfo">
             <section id="static-section" className="section">
@@ -43,6 +44,7 @@ function StaticInfo() {
             </section>
         </div>
     )
+    else return; 
 }
 
 export default StaticInfo;

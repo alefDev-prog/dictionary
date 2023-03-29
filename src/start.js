@@ -1,16 +1,12 @@
-import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
 import Form from "./form";
-import App from "./App";
 import React from "react";
-import { Link } from "react-router-dom";
+
 function Start () {
 
     return (
-        <div>
-
+        <div id="start-wrapper">
+            <h1 id="start-title" className="title">AllanDict</h1>
             <Form className="start"/>
-
-            <Link to="/search">test</Link>
             
         </div>
     )

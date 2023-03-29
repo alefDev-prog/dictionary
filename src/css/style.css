@@ -8,6 +8,7 @@
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
+  height: 100%;
 }
 
 #root {
@@ -26,6 +27,7 @@ body {
 }
 
 #search-form {
+  padding: 0 1rem;
   width: 100%;
   max-width: 500px;
   display: flex;
@@ -91,4 +93,14 @@ main {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: rgb(85, 85, 85);
+}
+
+#start-wrapper {
+  height: 100%;
+}
+#start-wrapper #start-title {
+  color: rgb(0, 106, 255);
+  text-align: center;
+  font-size: 6rem;
+  margin: 35% 0 4rem 0;
 }/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@
 @import '_mixins.scss';
 
 #search-form  {
+    padding:0 1rem;
     width: 100%;
     max-width: 500px;
     @include flex(row, nowrap);
@@ -77,6 +78,16 @@ main {
         margin-bottom: 1rem;
         color:$definition-color;
 
+    }
+}
+
+#start-wrapper {
+    height: 100%;
+    #start-title  {
+        color:$blue-color;
+        text-align: center;
+        font-size: 6rem;
+        margin: 35% 0 4rem 0;
     }
 }
 
