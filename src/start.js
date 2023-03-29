@@ -8,7 +8,7 @@ function Start () {
     return (
         <div>
 
-            <Form />
+            <Form className="start"/>
 
             <Link to="/search">test</Link>
             

@@ -4,8 +4,10 @@ import { getWordInfo, setInformation } from './redux/wordSlice';
 import {useEffect, useState} from 'react';
 import { useSelector, useDispatch} from 'react-redux';
 import React from "react";
+import { useNavigate } from 'react-router';
 
 function Form() {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [input, setInput] = useState("");
 
@@ -16,9 +18,13 @@ function Form() {
       const search = (e) => {
         e.preventDefault();
         dispatch(getWordInfo(input));
-        setTimeout(()=> {
-    
-        }, 2000);
+        
+        if(!window.location.pathname.includes("search")) {
+            navigate("/search");
+        }
+        
+
+        
       }
 
     return (
