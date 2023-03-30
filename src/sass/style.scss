@@ -25,10 +25,27 @@ main {
     height: 100%;
 }
 
+.title {
+    color:$blue-color;
+}
+
 .section {
     background-color: $white-color;
     margin:1rem 1rem;
     padding:1rem;
+
+}
+
+#search-title-wrapper {
+    @include flex(row, nowrap);
+    justify-content: center;
+}
+
+#search-title {
+    font-size: 6rem;
+    text-align: center;
+    text-decoration: none;
+    
 }
 
 #static-section {
@@ -80,6 +97,8 @@ main {
 
     }
 }
+
+
 
 #start-wrapper {
     height: 100%;

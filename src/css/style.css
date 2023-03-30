@@ -51,10 +51,27 @@ main {
   height: 100%;
 }
 
+.title {
+  color: rgb(0, 106, 255);
+}
+
 .section {
   background-color: white;
   margin: 1rem 1rem;
   padding: 1rem;
+}
+
+#search-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#search-title {
+  font-size: 6rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 #static-section article * {
