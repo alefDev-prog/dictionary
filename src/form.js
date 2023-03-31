@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { getWordInfo, setInformation } from './redux/wordSlice';
-import {useEffect, useState} from 'react';
-import { useSelector, useDispatch} from 'react-redux';
+import { getWordInfo} from './redux/wordSlice';
+import {useState} from 'react';
+import {useDispatch} from 'react-redux';
 import React from "react";
 import { useNavigate } from 'react-router';
 

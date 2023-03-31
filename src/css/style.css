@@ -26,6 +26,14 @@ body {
   height: 100%;
 }
 
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 #search-form {
   padding: 0 1rem;
   width: 100%;
@@ -120,4 +128,20 @@ main {
   text-align: center;
   font-size: 6rem;
   margin: 35% 0 4rem 0;
+}
+
+#loading-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+#loading-wrapper #loading-icon {
+  font-size: 5rem;
+  animation-name: loading-spinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }/*# sourceMappingURL=style.css.map */

@@ -7,17 +7,17 @@ function Definiton (){
     if(information !== null) {
         var meanings = information[0].meanings;
 
-        var dynamicInfo = meanings.map(el => {
+        var dynamicInfo = meanings.map((el, index) => {
             const partOfSpeech = el.partOfSpeech;
             const definitions = el.definitions.map((def, index) => {
-                return <p className="definition" key={def.id}>{def.definition}</p>
+                return <p className="definition" key={def}>{def.definition}</p>
             })
 
             return(
                 <div id="definition-section"className="section">
-                    <h2 id="definition-title">{partOfSpeech}</h2>
+                    <h2 id="definition-title" key={el}>{partOfSpeech}</h2>
                     <article>
-                        <h3>{definitions}</h3>
+                        <h3 key={index}>{definitions}</h3>
                     </article>
                 </div>
                 
@@ -27,6 +27,9 @@ function Definiton (){
 
     return (
         <div className="definitions">
+            
+            
+
             {dynamicInfo}
         </div>
         

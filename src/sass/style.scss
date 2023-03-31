@@ -1,5 +1,6 @@
 @import '_reset.scss';
 @import '_mixins.scss';
+@import '_animations.scss';
 
 #search-form  {
     padding:0 1rem;
@@ -107,6 +108,21 @@ main {
         text-align: center;
         font-size: 6rem;
         margin: 35% 0 4rem 0;
+    }
+}
+
+#loading-wrapper {
+    @include flex(row, nowrap);
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+
+    #loading-icon {
+        font-size: 5rem;
+        animation-name: loading-spinner;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 }
 

@@ -12,7 +12,7 @@ function AllRoutes() {
                 <Route path="/search" element={<App />} />
                 
             </Routes>
-        </BrowserRouter>
+        </BrowserRouter>    
             
         )
 }
