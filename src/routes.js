@@ -8,7 +8,7 @@ function AllRoutes() {
         
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Start />} />
+                <Route path="/dictionary" element={<Start />} />
                 <Route path="/search" element={<App />} />
                 
             </Routes>
