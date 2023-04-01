@@ -28,10 +28,14 @@ function Form() {
       }
 
     return (
-        <form id="search-form"onSubmit={search}>
-        <input id="input" type="text" onChange={handleChange} autoFocus placeholder='Enter word'/>
-        <button type="submit" id="submit" name="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-        </form>
+
+        <div id="search-form-wrapper">
+            <form id="search-form"onSubmit={search}>
+                <input id="input" type="text" onChange={handleChange} autoFocus placeholder='Enter word'/>
+                <button type="submit" id="submit" name="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+            </form>
+        </div>
+        
     )
 }
 
