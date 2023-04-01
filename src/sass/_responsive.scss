@@ -1,8 +1,14 @@
-@import '_mixins';
-
 @media screen and (min-width: 720px) {
-    .section {
+    
+
+    .section-wrapper {
+        @include flex(column, nowrap);
+        align-items: center;
         
-        background-color: red;
+
+        .section {
+          
+            width: 700px;
+        }
     }
 }

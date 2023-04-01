@@ -3,6 +3,22 @@
 @import '_animations.scss';
 @import '_responsive.scss';
 
+
+#start-wrapper {
+    
+    #start-title  {
+        color:$blue-color;
+        text-align: center;
+        font-size: 6rem;
+        padding-top:12%;
+    }
+
+    #search-form-wrapper {
+        padding-top: 2.5%;
+    }
+}
+
+
 #search-form-wrapper {
     width: 100%;
     @include flex(row,nowrap);
@@ -114,17 +130,6 @@ main {
 }
 
 
-
-#start-wrapper {
-    height: 100%;
-    #start-title  {
-        color:$blue-color;
-        text-align: center;
-        font-size: 6rem;
-        margin: 35% 0 4rem 0;
-    }
-}
-
 #loading-wrapper {
     @include flex(row, nowrap);
     justify-content: center;
@@ -140,21 +145,5 @@ main {
     }
 }
 
-@media screen and (min-width: 720px) {
-    
-
-    .section-wrapper {
-        @include flex(column, nowrap);
-        align-items: center;
-        
-
-        .section {
-          
-            width: 700px;
-        }
-    }
-
-
-}
 
 

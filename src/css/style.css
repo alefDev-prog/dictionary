@@ -9,14 +9,19 @@ html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
   height: 100%;
+  display: relative;
 }
 
 #root {
+  top: 0;
   height: 100%;
   padding-bottom: 2rem;
 }
 
 body {
+  display: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   background-color: rgb(224, 224, 224);
 }
@@ -35,10 +40,26 @@ body {
   }
 }
 @media screen and (min-width: 720px) {
-  .section {
-    background-color: red;
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .section-wrapper .section {
+    width: 700px;
   }
 }
+#start-wrapper #start-title {
+  color: rgb(0, 106, 255);
+  text-align: center;
+  font-size: 6rem;
+  padding-top: 12%;
+}
+#start-wrapper #search-form-wrapper {
+  padding-top: 2.5%;
+}
+
 #search-form-wrapper {
   width: 100%;
   display: flex;
@@ -138,16 +159,6 @@ main {
   color: rgb(85, 85, 85);
 }
 
-#start-wrapper {
-  height: 100%;
-}
-#start-wrapper #start-title {
-  color: rgb(0, 106, 255);
-  text-align: center;
-  font-size: 6rem;
-  margin: 35% 0 4rem 0;
-}
-
 #loading-wrapper {
   display: flex;
   flex-direction: row;
@@ -162,16 +173,4 @@ main {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-}
-
-@media screen and (min-width: 720px) {
-  .section-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-  .section-wrapper .section {
-    width: 700px;
-  }
 }/*# sourceMappingURL=style.css.map */
