@@ -14,8 +14,8 @@ function Definiton (){
             })
 
             return(
-                <div id="definition-section"className="section">
-                    <h2 id="definition-title" key={el}>{partOfSpeech}</h2>
+                <div className="section definition-section">
+                    <h2 className="definition-title" key={el}>{partOfSpeech}</h2>
                     <article>
                         <h3 key={index}>{definitions}</h3>
                     </article>
@@ -26,10 +26,7 @@ function Definiton (){
     }
 
     return (
-        <div className="definitions">
-            
-            
-
+        <div className="section-wrapper">
             {dynamicInfo}
         </div>
         

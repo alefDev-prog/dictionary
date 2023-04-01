@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
 
-      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/">AllanDict</Link></h1>
+      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/dictionary">AllanDict</Link></h1>
       <Form />
 
       {isLoading === false 

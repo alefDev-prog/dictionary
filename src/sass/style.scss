@@ -1,6 +1,7 @@
 @import '_reset.scss';
 @import '_mixins.scss';
 @import '_animations.scss';
+@import '_responsive.scss';
 
 #search-form-wrapper {
     width: 100%;
@@ -29,18 +30,13 @@
 main {
     margin-top: 4rem;
     height: 100%;
+   
 }
 
 .title {
     color:$blue-color;
 }
 
-.section {
-    background-color: $white-color;
-    margin:1rem 1rem;
-    padding:1rem;
-
-}
 
 #search-title-wrapper {
     @include flex(row, nowrap);
@@ -54,8 +50,20 @@ main {
     
 }
 
-#static-section {
+#section-wrapper {
+    display:block;
+}
 
+.section {
+    background-color: $white-color;
+    margin:1rem 1rem;
+    padding:1rem;
+    max-width: 700px;
+}
+
+#static-section {
+   
+    
     article * {
         margin-bottom: 0.7rem;
 
@@ -86,8 +94,9 @@ main {
     }
 }
 
-#definition-section {
-    #definition-title {
+.definition-section {
+
+    .definition-title {
         font-size: 2.3rem;
         margin-bottom: 1.5rem;
     }
@@ -107,8 +116,6 @@ main {
 
 
 #start-wrapper {
-    position: relative;
-    top:0;
     height: 100%;
     #start-title  {
         color:$blue-color;
@@ -133,5 +140,21 @@ main {
     }
 }
 
+@media screen and (min-width: 720px) {
+    
+
+    .section-wrapper {
+        @include flex(column, nowrap);
+        align-items: center;
+        
+
+        .section {
+          
+            width: 700px;
+        }
+    }
+
+
+}
 
 

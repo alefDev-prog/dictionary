@@ -28,9 +28,8 @@ function StaticInfo() {
     }
     
     if(information !== null) return(
-
-        <div className="StaticInfo">
-            <section id="static-section" className="section">
+        <div className="section-wrapper">
+            <div id="static-section" className="section">
                 {
                 information === null ?
                 <div></div>:
@@ -41,8 +40,11 @@ function StaticInfo() {
                 </article>
                 
                 }
-            </section>
+            </div>
         </div>
+       
+            
+       
     )
     else return; 
 }

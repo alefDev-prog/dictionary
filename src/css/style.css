@@ -34,6 +34,11 @@ body {
     transform: rotate(360deg);
   }
 }
+@media screen and (min-width: 720px) {
+  .section {
+    background-color: red;
+  }
+}
 #search-form-wrapper {
   width: 100%;
   display: flex;
@@ -71,12 +76,6 @@ main {
   color: rgb(0, 106, 255);
 }
 
-.section {
-  background-color: white;
-  margin: 1rem 1rem;
-  padding: 1rem;
-}
-
 #search-title-wrapper {
   display: flex;
   flex-direction: row;
@@ -88,6 +87,17 @@ main {
   font-size: 6rem;
   text-align: center;
   text-decoration: none;
+}
+
+#section-wrapper {
+  display: block;
+}
+
+.section {
+  background-color: white;
+  margin: 1rem 1rem;
+  padding: 1rem;
+  max-width: 700px;
 }
 
 #static-section article * {
@@ -115,22 +125,20 @@ main {
   content: "";
 }
 
-#definition-section #definition-title {
+.definition-section .definition-title {
   font-size: 2.3rem;
   margin-bottom: 1.5rem;
 }
-#definition-section article {
+.definition-section article {
   margin-left: 2rem;
 }
-#definition-section .definition {
+.definition-section .definition {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: rgb(85, 85, 85);
 }
 
 #start-wrapper {
-  position: relative;
-  top: 0;
   height: 100%;
 }
 #start-wrapper #start-title {
@@ -154,4 +162,16 @@ main {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+@media screen and (min-width: 720px) {
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .section-wrapper .section {
+    width: 700px;
+  }
 }/*# sourceMappingURL=style.css.map */
