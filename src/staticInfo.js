@@ -21,7 +21,7 @@ function StaticInfo() {
 
         //partOfSpeech
         var partArr = information[0].meanings.map((element, index) => {
-            return <span key={element.elementId}>{element.partOfSpeech}</span>;
+            return <span key={element+index}>{element.partOfSpeech}</span>;
         });
         
         

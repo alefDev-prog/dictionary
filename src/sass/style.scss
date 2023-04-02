@@ -36,7 +36,7 @@
        
     }
     #submit {
-        padding: 1rem;
+        padding: 0 1.5rem;
         background-color: $blue-color;
         color:white;
         border:none;
@@ -143,6 +143,18 @@ main {
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
+}
+
+
+#error-wrapper {
+    height: 50vh;
+    @include flex(row, nowrap);
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message {
+    
 }
 
 

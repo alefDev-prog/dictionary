@@ -3,7 +3,8 @@ import axios from "axios";
 
 const initialState = {
     information: null,
-    isLoading:false
+    isLoading:false,
+    error: null
 }
 
 export const getWordInfo = createAsyncThunk('info/getWordInfo', async (word, thunkAPI) => {
@@ -26,13 +27,16 @@ const infoSlice = createSlice({
         builder
         .addCase(getWordInfo.pending, (state, action) => {
             state.isLoading=true;
+            state.error = null;
         })
         .addCase(getWordInfo.rejected, (state, action) => {
             state.isLoading=false;
+            state.error=action.error.message;
         })
         .addCase(getWordInfo.fulfilled, (state, action) => {
             state.isLoading=false;
             state.information=action.payload;
+            state.error = null;
         })
         
     }

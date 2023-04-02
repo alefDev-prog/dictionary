@@ -10,6 +10,7 @@ function Definiton (){
         var dynamicInfo = meanings.map((el, index) => {
             const partOfSpeech = el.partOfSpeech;
             const definitions = el.definitions.map((def, index) => {
+                
                 return <p className="definition" key={def}>{def.definition}</p>
             })
 
@@ -17,7 +18,7 @@ function Definiton (){
                 <div className="section definition-section">
                     <h2 className="definition-title" key={el}>{partOfSpeech}</h2>
                     <article>
-                        <h3 key={index}>{definitions}</h3>
+                        <h3 key={el+index}>{definitions}</h3>
                     </article>
                 </div>
                 
