@@ -8,9 +8,6 @@
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
-  display: fixed;
-  z-index: 2;
-  background-color: rgb(224, 224, 224);
 }
 
 #root {
@@ -20,10 +17,10 @@ html {
 }
 
 body {
-  display: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
+  display: fixed;
+  z-index: 2;
+  background-color: rgb(224, 224, 224);
 }
 
 .App {
