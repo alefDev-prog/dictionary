@@ -7,7 +7,6 @@ function Loading() {
     return (
         <div id="loading-wrapper">
             <FontAwesomeIcon icon={faSpinner} id="loading-icon"/>
-            
         </div>
         
     )

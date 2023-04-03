@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter ,Route, Routes } from "react-router-dom";
 import Start from './start';
 import App from "./App";
 import React from "react";
@@ -6,13 +6,13 @@ function AllRoutes() {
     return (
         
         
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
-                <Route path="/dictionary" element={<Start />} />
+                <Route path="/" element={<Start />} />
                 <Route path="/search" element={<App />} />
                 
             </Routes>
-        </BrowserRouter>    
+        </HashRouter>    
             
         )
 }

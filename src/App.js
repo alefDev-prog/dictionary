@@ -16,7 +16,7 @@ function App() {
   if(!isLoading && error === null) return (
     <div className="App">
 
-      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/dictionary">DictAL</Link></h1>
+      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/">DictAL</Link></h1>
       <Form />
       <main>
         <StaticInfo />
@@ -29,7 +29,7 @@ function App() {
   else if(isLoading) return (
     <div className="App">
 
-      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/dictionary">DictAL</Link></h1>
+      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/">DictAL</Link></h1>
       
       <Form />
       <Loading /> 
@@ -40,7 +40,7 @@ function App() {
   else if(error !== null) return (
 
     <div className="App">
-      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/dictionary">DictAL</Link></h1>
+      <h1 id="search-title-wrapper"><Link className="title" id="search-title"  to="/">DictAL</Link></h1>
       <Form />
       <div id="error-wrapper">
         {

@@ -4,6 +4,11 @@ import { useSelector } from "react-redux";
 function Definiton (){
     const {information} = useSelector(store => store.getWord);
 
+
+    const generateKey = (val) => {
+        return `${val}_${new Date().getTime()}`;
+    }
+
     if(information !== null) {
         var meanings = information[0].meanings;
 
@@ -18,7 +23,7 @@ function Definiton (){
                 <div className="section definition-section">
                     <h2 className="definition-title" key={el}>{partOfSpeech}</h2>
                     <article>
-                        <h3 key={el+index}>{definitions}</h3>
+                        <h3 key={generateKey(el+index)}>{definitions}</h3>
                     </article>
                 </div>
                 
