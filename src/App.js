@@ -1,10 +1,10 @@
 import './css/style.css';
-import StaticInfo from './staticInfo.js';
-import Definiton from './definition';
+import StaticInfo from './components/staticInfo.js';
+import Definiton from './components/definition';
 import Loading from './loading';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch} from 'react-redux';
-import Form from './form';
+import { useSelector} from 'react-redux';
+import Form from './components/form';
 import React from "react";
 
 //api for dictionary: https://dictionaryapi.dev/

@@ -1,5 +1,7 @@
 {
-  "name": "is-real-world",
+  "name": "dictionary",
+  "author": "Allan Efendic",
+  "description": "This is a english dictionary made using a backend-api",
   "version": "0.1.0",
   "homepage": "https://alefDev-prog.github.io/dictionary",
   "private": true,

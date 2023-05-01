@@ -53,6 +53,11 @@ body {
   font-size: 6rem;
   padding-top: 12%;
 }
+#start-wrapper h2 {
+  margin-top: 1em;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
 #start-wrapper #search-form-wrapper {
   padding-top: 2.5%;
 }
@@ -77,8 +82,13 @@ body {
   padding: 1rem 2rem;
   width: 100%;
   font-size: 2rem;
+  border: none;
+}
+#search-form #input:focus {
+  outline: none;
 }
 #search-form #submit {
+  cursor: pointer;
   padding: 0 1.5rem;
   background-color: rgb(0, 106, 255);
   color: white;

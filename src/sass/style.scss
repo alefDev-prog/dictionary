@@ -13,6 +13,12 @@
         padding-top:12%;
     }
 
+    h2 {
+        margin-top: 1em;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
     #search-form-wrapper {
         padding-top: 2.5%;
     }
@@ -33,9 +39,15 @@
         padding:1rem 2rem;
         width: 100%;
         font-size: 2rem;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
        
     }
     #submit {
+        cursor: pointer;
         padding: 0 1.5rem;
         background-color: $blue-color;
         color:white;
